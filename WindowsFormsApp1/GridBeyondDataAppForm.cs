@@ -50,7 +50,7 @@ namespace WindowsFormsApp1
 
             // Ideally wanted to get this to just return a sum of total MarketPrice where the dates exist within an hour of each other
             // as well as the hour in question for the values
-            // Couldn't get it working correctly
+            // Couldn't get it working correctly. I've tried quite a few different queries,but unfortunately was unable to resolve it
             var highestValuesQuery = @"SELECT date, Market_Price_EX1
                                         FROM(SELECT MarketPrice.*,
                                                      (row_number() over(ORDER BY date) -
